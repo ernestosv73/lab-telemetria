@@ -1,0 +1,51 @@
+name: ipv6cisco2
+
+mgmt:
+  network: mgmt
+  ipv4-subnet: 192.168.101.0/24
+
+topology:
+  nodes:
+    core:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:l2-17.12.01
+      type: l2
+
+    acceso:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:l2-17.12.01
+      type: l2  
+                      
+    PC1:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest
+      exec:
+      #- ip -6 route del default dev eth0
+      #- ip link add name eth1.10 link eth1 type vlan id 10
+      #- ip link set dev eth1.10 up
+
+    PC2:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest
+      exec:
+      #- ip -6 route del default dev eth0    
+      #- ip link add name eth1.20 link eth1 type vlan id 20
+      #- ip link set dev eth1.20 up
+
+    PC3:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest
+      exec:
+      #- ip -6 route del default dev eth0    
+      #- ip link add name eth1.20 link eth1 type vlan id 20
+      #- ip link set dev eth1.20 up  
+
+  links:
+    - endpoints: ["core:Ethernet0/1","acceso:Ethernet0/1"]
+    - endpoints: ["PC1:eth1","acceso:Ethernet0/2"]
+      mtu: 1500
+    - endpoints: ["PC2:eth1","acceso:Ethernet0/3"]
+      mtu: 1500
+    - endpoints: ["PC3:eth1","acceso:Ethernet1/0"]
+      mtu: 1500  
+      
