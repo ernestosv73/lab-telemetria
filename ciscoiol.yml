@@ -40,7 +40,7 @@ topology:
       #- ip link add name eth1.20 link eth1 type vlan id 20
       #- ip link set dev eth1.20 up 
 
-    PC3:
+    PC4:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
       #exec:
