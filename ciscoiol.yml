@@ -19,7 +19,7 @@ topology:
     PC1:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
-      exec:
+      #exec:
       #- ip -6 route del default dev eth0
       #- ip link add name eth1.10 link eth1 type vlan id 10
       #- ip link set dev eth1.10 up
@@ -27,7 +27,7 @@ topology:
     PC2:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
-      exec:
+      #exec:
       #- ip -6 route del default dev eth0    
       #- ip link add name eth1.20 link eth1 type vlan id 20
       #- ip link set dev eth1.20 up
@@ -35,7 +35,15 @@ topology:
     PC3:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
-      exec:
+      #exec:
+      #- ip -6 route del default dev eth0    
+      #- ip link add name eth1.20 link eth1 type vlan id 20
+      #- ip link set dev eth1.20 up 
+
+    PC3:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest
+      #exec:
       #- ip -6 route del default dev eth0    
       #- ip link add name eth1.20 link eth1 type vlan id 20
       #- ip link set dev eth1.20 up  
@@ -47,5 +55,7 @@ topology:
     - endpoints: ["PC2:eth1","acceso:Ethernet0/3"]
       mtu: 1500
     - endpoints: ["PC3:eth1","acceso:Ethernet1/0"]
-      mtu: 1500  
+      mtu: 1500
+    - endpoints: ["PC4:eth1","acceso:Ethernet1/1"]
+      mtu: 1500    
       
