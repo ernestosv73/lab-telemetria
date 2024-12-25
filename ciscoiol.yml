@@ -50,12 +50,13 @@ topology:
 
   links:
     - endpoints: ["core:Ethernet0/1","acceso:Ethernet0/1"]
-    - endpoints: ["PC1:eth1","acceso:Ethernet0/2"]
+    - endpoints: ["core:Ethernet0/2","acceso:Ethernet0/2"]
+    - endpoints: ["PC1:eth1","acceso:Ethernet0/3"]
       mtu: 1500
-    - endpoints: ["PC2:eth1","acceso:Ethernet0/3"]
+    - endpoints: ["PC2:eth1","acceso:Ethernet1/0"]
       mtu: 1500
-    - endpoints: ["PC3:eth1","acceso:Ethernet1/0"]
+    - endpoints: ["PC3:eth1","acceso:Ethernet1/1"]
       mtu: 1500
-    - endpoints: ["PC4:eth1","acceso:Ethernet1/1"]
+    - endpoints: ["PC4:eth1","acceso:Ethernet1/2"]
       mtu: 1500    
       
