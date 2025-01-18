@@ -6,10 +6,10 @@ mgmt:
 
 topology:
   nodes:
-    core:
-      kind: cisco_iol
-      image: vrnetlab/cisco_iol:l2-17.12.01
-      type: l2
+    #core:
+      #kind: cisco_iol
+      #image: vrnetlab/cisco_iol:l2-17.12.01
+      #type: l2
 
     acceso:
       kind: cisco_iol
@@ -32,31 +32,31 @@ topology:
       #- ip link add name eth1.20 link eth1 type vlan id 20
       #- ip link set dev eth1.20 up
 
-    PC3:
-      kind: linux
-      image: esanchezv/kaliipv6v2.2:latest
+    #PC3:
+      #kind: linux
+      #image: esanchezv/kaliipv6v2.2:latest
       #exec:
       #- ip -6 route del default dev eth0    
       #- ip link add name eth1.20 link eth1 type vlan id 20
       #- ip link set dev eth1.20 up 
 
-    PC4:
-      kind: linux
-      image: esanchezv/kaliipv6v2.2:latest
+    #PC4:
+      #kind: linux
+      #image: esanchezv/kaliipv6v2.2:latest
       #exec:
       #- ip -6 route del default dev eth0    
       #- ip link add name eth1.20 link eth1 type vlan id 20
       #- ip link set dev eth1.20 up  
 
   links:
-    - endpoints: ["core:Ethernet0/1","acceso:Ethernet0/1"]
-    - endpoints: ["core:Ethernet0/2","acceso:Ethernet0/2"]
-    - endpoints: ["PC1:eth1","acceso:Ethernet0/3"]
+    #- endpoints: ["core:Ethernet0/1","acceso:Ethernet0/1"]
+    #- endpoints: ["core:Ethernet0/2","acceso:Ethernet0/2"]
+    - endpoints: ["PC1:eth1","acceso:Ethernet0/1"]
       mtu: 1500
-    - endpoints: ["PC2:eth1","acceso:Ethernet1/0"]
+    - endpoints: ["PC2:eth1","acceso:Ethernet0/2"]
       mtu: 1500
-    - endpoints: ["PC3:eth1","acceso:Ethernet1/1"]
-      mtu: 1500
-    - endpoints: ["PC4:eth1","acceso:Ethernet1/2"]
-      mtu: 1500    
+    #- endpoints: ["PC3:eth1","acceso:Ethernet1/1"]
+      #mtu: 1500
+    #- endpoints: ["PC4:eth1","acceso:Ethernet1/2"]
+      #mtu: 1500    
       
