@@ -14,7 +14,9 @@ topology:
     acceso:
       kind: cisco_iol
       image: vrnetlab/cisco_iol:l2-17.12.01
-      type: l2  
+      type: l2
+      exec:
+        - "sysctl -w net.ipv6.conf.all.accept_ra=0"
                       
     PC1:
       kind: linux
