@@ -17,6 +17,7 @@ topology:
       type: l2
       exec:
         - "sysctl -w net.ipv6.conf.all.accept_ra=0"
+        - "sysctl -w net.ipv6.conf.default.accept_ra=0"
                       
     PC1:
       kind: linux
