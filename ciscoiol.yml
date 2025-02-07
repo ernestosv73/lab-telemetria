@@ -9,9 +9,8 @@ topology:
   
     core:
       kind: cisco_iol
-      image: vrnetlab/cisco_iol:l2-17.12.01
-      type: l2
-      startup-config: config/core/config.partial
+      image: vrnetlab/cisco_iol:17.12.01
+      #startup-config: config/core/config.partial
       binds:
        - config/disable_ipv6_ra.sh:/iol/disable_ipv6_ra.sh
       exec:
