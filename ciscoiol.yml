@@ -9,7 +9,7 @@ topology:
   
     core:
       kind: cisco_iol
-      image: arthurk99/cisco-iol-l2:17.15.01
+      image: arthurk99/cisco-iol:17.15.01 
       #startup-config: config/core/config.partial
       #binds:
        #- config/disable_ipv6_ra.sh:/iol/disable_ipv6_ra.sh
@@ -17,16 +17,11 @@ topology:
         #- chmod +x /iol/disable_ipv6_ra.sh
         #- bash /iol/disable_ipv6_ra.sh 
         
-    acceso:
-      kind: cisco_iol
-      image: arthurk99/cisco-iol-l2:17.15.01
-      type: l2
-      #startup-config: config/acceso/config.partial
-      #binds:
-       #- config/disable_ipv6_ra.sh:/iol/disable_ipv6_ra.sh
-      #exec:
-        #- chmod +x /iol/disable_ipv6_ra.sh
-        #- bash /iol/disable_ipv6_ra.sh 
+    srlswitch:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux:24.10.1
+      type: ixrd3
+      startup-config: switch/srlswitch.cfg
                       
     PC1:
       kind: linux
@@ -61,14 +56,13 @@ topology:
       #- ip link set dev eth1.20 up  
 
   links:
-    - endpoints: ["core:Ethernet0/1","acceso:Ethernet0/1"]
-    #- endpoints: ["core:Ethernet0/2","acceso:Ethernet0/2"]
-    - endpoints: ["PC1:eth1","acceso:Ethernet0/2"]
+    - endpoints: ["core:Ethernet0/1","srlswitch:e1-1"]    
+    - endpoints: ["PC1:eth1","srlswitch:e1-2"]
       mtu: 1500
-    - endpoints: ["PC2:eth1","acceso:Ethernet0/3"]
+    - endpoints: ["PC2:eth1","srlswitch:e1-3"]
       mtu: 1500
-    - endpoints: ["PC3:eth1","acceso:Ethernet1/1"]
+    - endpoints: ["PC3:eth1","srlswitch:e1-4"]
       mtu: 1500
-    - endpoints: ["PC4:eth1","acceso:Ethernet1/2"]
+    - endpoints: ["PC4:eth1","srlswitch:e1-5"]
       mtu: 1500    
       
