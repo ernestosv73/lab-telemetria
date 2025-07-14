@@ -7,7 +7,7 @@ mgmt:
 topology:
   nodes:
   
-    core:
+    ciscort:
       kind: cisco_iol
       image: docker.io/arthurk99/cisco-iol:17.15.01 
       startup-config: config/core/config.partial
@@ -51,7 +51,7 @@ topology:
       
 
   links:
-    - endpoints: ["core:Ethernet0/1","srlswitch:e1-1"]    
+    - endpoints: ["ciscort:Ethernet0/1","srlswitch:e1-1"]    
     - endpoints: ["gNMIc:eth1","srlswitch:e1-2"]
       mtu: 1500
     - endpoints: ["PC2:eth1","srlswitch:e1-3"]
