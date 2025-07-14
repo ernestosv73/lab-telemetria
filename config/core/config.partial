@@ -1,13 +1,9 @@
 conf t
-vlan 10
+interface ethernet 0/1
+ip address 10.0.0.1 255.255.255.0
+no shutdown
 exit
-interface vlan 10
-ipv6 address 2001:db8:10::1/64
-ipv6 nd prefix 2001:DB8:10::/64
-exit
-interface Ethernet0/1
-switchport trunk encapsulation dot1q
-switchport trunk allowed vlan 10
-switchport mode trunk
-no shut
+ip dhcp pool net10
+network 10.0.0.0 255.255.255.0
+default-router 10.0.0.1
 exit
