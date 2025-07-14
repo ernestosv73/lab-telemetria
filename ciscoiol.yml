@@ -9,7 +9,7 @@ topology:
   
     core:
       kind: cisco_iol
-      image: arthurk99/cisco-iol:17.15.01 
+      image: docker.io/arthurk99/cisco-iol:17.15.01 
       startup-config: config/core/config.partial
       #binds:
        #- config/disable_ipv6_ra.sh:/iol/disable_ipv6_ra.sh
