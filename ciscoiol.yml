@@ -57,7 +57,7 @@ topology:
 
   links:
     - endpoints: ["core:Ethernet0/1","srlswitch:e1-1"]    
-    - endpoints: ["PC1:eth1","srlswitch:e1-2"]
+    - endpoints: ["gNMIc:eth1","srlswitch:e1-2"]
       mtu: 1500
     - endpoints: ["PC2:eth1","srlswitch:e1-3"]
       mtu: 1500
