@@ -33,27 +33,22 @@ topology:
 
     PC2:
       kind: linux
-      image: esanchezv/kaliipv6v2.2:latest
+      image: docker.io/esanchezv/kaliipv6v2.2:latest
       #exec:
       #- ip -6 route del default dev eth0    
-      #- ip link add name eth1.20 link eth1 type vlan id 20
-      #- ip link set dev eth1.20 up
-
+      
     PC3:
       kind: linux
-      image: esanchezv/kaliipv6v2.2:latest
+      image: docker.io/esanchezv/kaliipv6v2.2:latest
       #exec:
       #- ip -6 route del default dev eth0    
-      #- ip link add name eth1.20 link eth1 type vlan id 20
-      #- ip link set dev eth1.20 up 
-
+     
     PC4:
       kind: linux
-      image: esanchezv/kaliipv6v2.2:latest
+      image: docker.io/esanchezv/kaliipv6v2.2:latest
       #exec:
       #- ip -6 route del default dev eth0    
-      #- ip link add name eth1.20 link eth1 type vlan id 20
-      #- ip link set dev eth1.20 up  
+      
 
   links:
     - endpoints: ["core:Ethernet0/1","srlswitch:e1-1"]    
