@@ -23,13 +23,13 @@ topology:
       type: ixrd3
       startup-config: switch/srlswitch.cfg
                       
-    PC1:
+    gNMIc:
       kind: linux
-      image: esanchezv/kaliipv6v2.2:latest
-      #exec:
-      #- ip -6 route del default dev eth0
-      #- ip link add name eth1.10 link eth1 type vlan id 10
-      #- ip link set dev eth1.10 up
+      image: esanchezv/hellt-gnmic:latest
+      binds:
+        - configs/python_scapy.sh:/root/python_scapy.sh
+      #exec: 
+         
 
     PC2:
       kind: linux
