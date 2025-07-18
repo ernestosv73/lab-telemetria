@@ -53,9 +53,11 @@ topology:
       kind: linux
       image: docker.io/esanchezv/hellt-gnmic:latest
       binds:
+        - config/python_scapy.sh:/root/python_scapy.sh
         - config/gnmic/gnmic-config.yml:/gnmic-config.yml:ro
-      #exec: 
-         
+      exec: 
+        - chmod +x /root/python_scapy.sh
+        - bash /root/python_scapy.sh   
 
     PC2:
       kind: linux
