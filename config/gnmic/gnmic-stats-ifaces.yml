@@ -1,0 +1,25 @@
+username: admin
+password: NokiaSrl1!
+insecure: false
+skip-verify: true
+timeout: 10s
+
+targets:
+  srlswitch:
+    address: srlswitch:57400
+
+subscriptions:    
+  srl-if-stats:
+    mode: stream
+    stream-mode: sample
+    sample-interval: 5s
+    paths:
+      - /interface[name=ethernet-1/*]/statistics
+      - /interface[name=ethernet-1/*]/traffic-rate
+      
+outputs:
+  file_output:
+    type: file
+    filename: /data/stats_ifaces.json
+    format: json
+    split-events: true      
