@@ -7,3 +7,8 @@ ip dhcp pool net10
 network 10.0.0.0 255.255.255.0
 default-router 10.0.0.1
 exit
+interface ethernet 0/2
+ipv6 nd prefix 3fff:1::/64 no-autoconfig
+no shutdown
+exit
+
