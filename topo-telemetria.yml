@@ -64,14 +64,13 @@ topology:
 
     PC2:
       kind: linux
-      image: docker.io/esanchezv/kaliipv6v2.2:latest
+      image: docker.io/esanchezv/kali-t50:latest
       exec:
-       - apt -y install t50       
-       #- ip route del default dev eth0    
+       - ip route del default dev eth0    
       
     PC3:
       kind: linux
-      image: docker.io/esanchezv/kaliipv6v2.2:latest
+      image: docker.io/esanchezv/kali-t50:latest
       exec:
        - ip route del default dev eth0        
      
