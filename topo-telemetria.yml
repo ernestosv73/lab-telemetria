@@ -67,7 +67,7 @@ topology:
       image: docker.io/esanchezv/kaliipv6v2.2:latest
       exec:
        - apt -y install t50       
-       - ip route del default dev eth0    
+       #- ip route del default dev eth0    
       
     PC3:
       kind: linux
