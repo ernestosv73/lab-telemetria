@@ -66,7 +66,7 @@ topology:
       kind: linux
       image: docker.io/esanchezv/kali-t50:latest
       exec:
-       - ip route del default dev eth0    
+       #- ip route del default dev eth0    
       
     PC3:
       kind: linux
