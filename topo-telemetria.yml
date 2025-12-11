@@ -77,8 +77,8 @@ topology:
     PC4:
       kind: linux
       image: docker.io/esanchezv/kaliipv6v2.2:latest
-      exec:
-       - ip route del default dev eth0 
+      #exec:
+       #- ip route del default dev eth0 
 
     srvweb:
        kind: linux
