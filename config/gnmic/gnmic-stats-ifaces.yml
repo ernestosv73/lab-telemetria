@@ -7,7 +7,8 @@ timeout: 10s
 targets:
   srlswitch:
     address: srlswitch:57400
-
+  
+  
 subscriptions:    
   srl-if-stats:
     mode: stream
@@ -25,4 +26,10 @@ outputs:
     type: file
     filename: /data/stats_ifaces.json
     format: json
-    split-events: true      
+    split-events: true   
+
+  prom-output:
+    type: prometheus
+    listen: :9273         
+
+    
