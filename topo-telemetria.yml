@@ -10,14 +10,14 @@ topology:
     srlrouter:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
-      type: ixrd3
+      type: ixr-d3
       #startup-config: switch/srlrouter.cfg
       
         
     srlswitch:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
-      type: ixrd3
+      type: ixr-d3
       startup-config: switch/srlswitch.cfg
                       
     # TELEMETRIA STACK
