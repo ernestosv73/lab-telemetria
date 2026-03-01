@@ -11,7 +11,7 @@ topology:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
-      #startup-config: switch/srlrouter.cfg
+      startup-config: switch/srlrouter.cfg
       
         
     srlswitch:
@@ -65,13 +65,13 @@ topology:
 
     PC2:
       kind: linux
-      image: docker.io/esanchezv/kali-t50:latest
+      image: docker.io/esanchezv/kaliipv6v2.2:latest
       exec:
        - ip route del default dev eth0    
       
     PC3:
       kind: linux
-      image: docker.io/esanchezv/kali-t50:latest
+      image: docker.io/esanchezv/kaliipv6v2.2:latest
       exec:
        - ip route del default dev eth0        
      
