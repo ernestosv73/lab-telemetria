@@ -17,16 +17,11 @@ subscriptions:
     paths:
       - /interface[name=ethernet-1/3]/statistics/in-multicast-packets
       - /interface[name=ethernet-1/3]/statistics/out-multicast-packets
-      - /interface[name=ethernet-1/3]/statistics/in-error-packets
-      - /interface[name=ethernet-1/3]/statistics/out-error-packets
       - /interface[name=ethernet-1/4]/statistics/in-multicast-packets
       - /interface[name=ethernet-1/4]/statistics/out-multicast-packets
-      - /interface[name=ethernet-1/4]/statistics/in-error-packets
-      - /interface[name=ethernet-1/4]/statistics/out-error-packets
       - /interface[name=ethernet-1/5]/statistics/in-multicast-packets
       - /interface[name=ethernet-1/5]/statistics/out-multicast-packets
-      - /interface[name=ethernet-1/5]/statistics/in-error-packets
-      - /interface[name=ethernet-1/5]/statistics/out-error-packets
+      
                  
 outputs:
   file_output:
