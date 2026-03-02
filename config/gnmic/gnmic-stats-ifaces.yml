@@ -15,7 +15,7 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
     paths:
-      - /interface[name=ethernet-1/3]/statistics/in-multicast-packets
+      - /interface[name=ethernet-1/3]/statistics/out-multicast-packets
       - /interface[name=ethernet-1/3]/statistics/in-error-packets
       - /interface[name=ethernet-1/4]/statistics/in-multicast-packets
       - /interface[name=ethernet-1/4]/statistics/in-error-packets
