@@ -18,7 +18,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "panels": [
     {
@@ -78,7 +77,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "pps"
         },
         "overrides": []
       },
@@ -102,7 +102,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -110,29 +110,43 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "platform_control_cpu_total_instant{subscription_name=\"srl-system-performance\"}",
-          "legendFormat": "__auto",
+          "expr": "rate(interface_statistics_in_multicast_packets{interface_name=\"ethernet-1/3\"}[1m])",
+          "legendFormat": "{{interface_name}} multicast packets",
           "range": true,
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "builder",
+          "expr": "rate(interface_statistics_in_error_packets{interface_name=\"ethernet-1/3\"}[1m])",
+          "instant": false,
+          "legendFormat": "{{interface_name}} error packets",
+          "range": true,
+          "refId": "B"
         }
       ],
-      "title": "New panel",
+      "title": "Ethernet-1/3 Stats",
       "type": "timeseries"
     }
   ],
   "preload": false,
+  "refresh": "10s",
   "schemaVersion": 42,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "telemetria",
-  "uid": "g8ld46",
-  "version": 1
+  "title": "Lab-Telemetria",
+  "uid": "gdmzj8",
+  "version": 1,
+  "weekStart": ""
 }
