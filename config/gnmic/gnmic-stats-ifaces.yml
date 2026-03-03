@@ -17,6 +17,8 @@ subscriptions:
     paths:
       - /interface[name=*]/statistics/in-multicast-packets
       - /interface[name=*]/statistics/out-multicast-packets
+      - /interface[name=*]/statistics/in-packets
+      - /interface[name=*]/statistics/out-packets
         
                  
 outputs:
