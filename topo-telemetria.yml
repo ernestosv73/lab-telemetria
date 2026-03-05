@@ -65,15 +65,10 @@ topology:
 
     PC2:
       kind: linux
-      image: alpine:latest
-      binds:
-        - config/iperf3.sh:/root/iperf3.sh
+      image: wbitt/network-multitool:alpine-extra
       exec:
        - ip route del default dev eth0
-       - chmod +x /root/iperf3.sh
-       - bash /root/iperf3.sh   
-
-      
+             
     PC3:
       kind: linux
       image: docker.io/esanchezv/kaliipv6v2.2:latest
