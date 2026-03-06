@@ -122,4 +122,3 @@ Este proyecto se distribuye bajo la licencia [MIT](LICENSE).
 
 ---
 
-> Creado con ❤️ para la comunidad de redes y DevOps.
