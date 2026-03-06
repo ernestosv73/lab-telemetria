@@ -64,7 +64,7 @@ El laboratorio implementa un stack completo de telemetría basado en los siguien
 Acceder al nodo desde una nueva terminal en Codespaces:
 
 ```bash
-docker exec -it clab-lab-telemetria-PC4 /bin/bash
+docker exec -it clab-lab-telemetria-gNMIc /bin/bash
 ```
 
 En el directorio principal se encuentran los archivos de configuración:
