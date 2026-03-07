@@ -19,6 +19,8 @@ subscriptions:
       - /interface[name=*]/statistics/out-multicast-packets
       - /interface[name=*]/statistics/in-packets
       - /interface[name=*]/statistics/out-packets
+      - /interface[name=*]/statistics/in-forwarded-packets
+      - /interface[name=*]/statistics/out-forwarded-packets
         
                  
 outputs:
