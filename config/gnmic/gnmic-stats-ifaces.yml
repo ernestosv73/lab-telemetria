@@ -17,10 +17,10 @@ subscriptions:
     paths:
       - /interface[name=*]/statistics/in-multicast-packets
       - /interface[name=*]/statistics/out-multicast-packets
-      - /interface[name=*]/statistics/in-packets
-      - /interface[name=*]/statistics/out-packets
-      - /interface[name=*]/statistics/in-forwarded-packets
-      - /interface[name=*]/statistics/out-forwarded-packets
+      - /interface[name=*]/statistics/ipv6/in-error
+      - /interface[name=*]/statistics/ipv6/out-error
+      - /interface[name=*]/statistics/ipv6/in-forwarded-packets
+      - /interface[name=*]/statistics/ipv6/out-forwarded-packets
         
                  
 outputs:
