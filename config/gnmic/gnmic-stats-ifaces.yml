@@ -32,8 +32,8 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
     paths:
-      - /interface[name=*]/subinterface[index=*]/ipv6/statistics/in-error-packets
-      - /interface[name=*]/subinterface[index=*]/ipv6/statistics/in-forwarded-packets
+      - /interface[name=ethernet-1/1]/statistics/in-error-packets
+      - /interface[name=ethernet-1/1]/statistics/in-packets
 
 outputs:
 
