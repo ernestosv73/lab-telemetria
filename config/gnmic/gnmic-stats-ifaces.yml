@@ -22,6 +22,7 @@ subscriptions:
       - /interface[name=*]/statistics/in-multicast-packets
       - /interface[name=*]/statistics/out-multicast-packets
       - /interface[name=*]/statistics/in-unicast-packets
+      - /interface[name=*]/statistics/in-error-packets
   
 
 outputs:
