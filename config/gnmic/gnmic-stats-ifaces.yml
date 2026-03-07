@@ -22,12 +22,7 @@ subscriptions:
       - /interface[name=*]/subinterface[index=*]/ipv6/statistics/in-forwarded-packets
       - /interface[name=*]/subinterface[index=*]/ipv6/statistics/out-forwarded-packets
                                
-outputs:
-  file_output:
-    type: file
-    filename: /data/stats_ifaces.json
-    format: json
-    split-events: true   
+
 
   prom-output:
     type: prometheus
