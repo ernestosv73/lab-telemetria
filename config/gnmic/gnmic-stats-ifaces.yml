@@ -12,12 +12,6 @@ targets:
     outputs:
       - prom-output
       - file_output
-  srlrouter:
-    address: srlswitch:57400
-    subscriptions:
-      - srlrouter-if-stats
-    outputs:
-      - prom-output
       
 subscriptions:
   srlswitch-if-stats:
@@ -27,13 +21,8 @@ subscriptions:
     paths:
       - /interface[name=*]/statistics/in-multicast-packets
       - /interface[name=*]/statistics/out-multicast-packets
-  srlrouter-if-stats:
-    mode: stream
-    stream-mode: sample
-    sample-interval: 5s
-    paths:
-      - /interface[name=ethernet-1/1]/statistics/in-error-packets
-      - /interface[name=ethernet-1/1]/statistics/in-unicast-packets
+      - /interface[name=*]/statistics/in-unicast-packets
+  
 
 outputs:
 
