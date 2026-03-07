@@ -23,7 +23,7 @@ subscriptions:
       - /interface[name=*]/subinterface[index=*]/ipv6/statistics/out-forwarded-packets
                                
 
-
+outputs:
   prom-output:
     type: prometheus
     listen: :9273         
