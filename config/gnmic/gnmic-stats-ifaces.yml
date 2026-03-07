@@ -16,11 +16,8 @@ subscriptions:
     sample-interval: 5s
     paths:
       - /interface[name=*]/statistics/in-multicast-packets
-      - /interface[name=*]/statistics/out-multicast-packets
-      - /interface[name=*]/subinterface[index=*]/ipv6/statistics/in-error-packets
-      - /interface[name=*]/subinterface[index=*]/ipv6/statistics/out-error-packets
-      - /interface[name=*]/subinterface[index=*]/ipv6/statistics/in-forwarded-packets
-      - /interface[name=*]/subinterface[index=*]/ipv6/statistics/out-forwarded-packets
+      - /interface[name=*]/subinterface[index=*]/ipv6/statistics
+   
                                
 
 outputs:
