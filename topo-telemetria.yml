@@ -55,7 +55,7 @@ topology:
       image: docker.io/esanchezv/hellt-gnmic:latest
       binds:
         - config/python_scapy.sh:/root/python_scapy.sh
-        - config/gnmic/gnmic-config.yml:/gnmic-config.yml:ro
+        - config/gnmic/gnmic-cpu-stats.yml:/gnmic-cpu-stats.yml:ro
         - config/gnmic/gnmic-stats-ifaces.yml:/gnmic-stats-ifaces.yml:ro
       exec: 
         - mkdir /data
