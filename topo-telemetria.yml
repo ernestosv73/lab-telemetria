@@ -56,7 +56,7 @@ topology:
       binds:
         - config/python_scapy.sh:/root/python_scapy.sh
         - config/gnmic/gnmic-cpu-stats.yml:/gnmic-cpu-stats.yml:ro
-        - config/gnmic/gnmic-stats-ifaces.yml:/gnmic-stats-ifaces.yml:ro
+        - config/gnmic/gnmic-stats-metricas.yml:/gnmic-stats-metricas.yml:ro
       exec: 
         - mkdir /data
         - chmod +x /data
