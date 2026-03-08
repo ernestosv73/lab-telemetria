@@ -12,8 +12,26 @@ targets:
     outputs:
       - prom-output
       - file_output
+    subscriptions:
+      - srl-system-perfomance
+      - srl-bridge-table
+    outputs:
+      - prom-output
+      
       
 subscriptions:
+  srl-system-performance:
+    mode: stream
+    stream-mode: sample
+    sample-interval: 5s
+    paths:
+      - /platform/control[slot=*]/cpu[index=all]/total
+  srl-bridge-table:
+    mode: stream
+    stream-mode: sample
+    sample-interval: 5s
+    paths:
+      - /network-instance[name=lanswitch]/bridge-table/statistics/total-entries
   srlswitch-if-stats:
     mode: stream
     stream-mode: sample
@@ -24,7 +42,6 @@ subscriptions:
       - /interface[name=*]/statistics/in-unicast-packets
       - /interface[name=*]/statistics/in-error-packets
   
-
 outputs:
 
   prom-output:
