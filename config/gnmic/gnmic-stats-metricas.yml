@@ -12,12 +12,15 @@ targets:
     outputs:
       - prom-output
       - file_output
+    
+targets:
+  srlswitch:
+    address: srlswitch:57400
     subscriptions:
       - srl-system-perfomance
       - srl-bridge-table
     outputs:
-      - prom-output
-      
+      - prom-output      
       
 subscriptions:
   srl-system-performance:
