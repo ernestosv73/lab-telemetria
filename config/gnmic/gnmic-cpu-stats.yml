@@ -20,7 +20,7 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
     paths:
-      - /network-instance[name=*]/bridge-table/statistics
+      - /network-instance[name=lanswitch]/bridge-table/statistics/total-entries
 
       
 outputs:
