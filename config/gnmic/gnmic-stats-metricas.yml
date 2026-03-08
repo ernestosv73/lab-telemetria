@@ -8,20 +8,13 @@ targets:
   srlswitch:
     address: srlswitch:57400
     subscriptions:
+      - srl-system-performance
+      - srl-bridge-table
       - srlswitch-if-stats
     outputs:
       - prom-output
       - file_output
     
-targets:
-  srlswitch:
-    address: srlswitch:57400
-    subscriptions:
-      - srl-system-perfomance
-      - srl-bridge-table
-    outputs:
-      - prom-output      
-      
 subscriptions:
   srl-system-performance:
     mode: stream
