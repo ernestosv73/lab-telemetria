@@ -32,7 +32,7 @@
 ## 🏗️ Arquitectura del laboratorio
 
 <!-- Reemplazar con imagen de la topología -->
-![Arquitectura del laboratorio](./images/topologia.png)
+![Arquitectura del laboratorio](./images/topologia-lab-telemetria.png)
 
 ---
 
