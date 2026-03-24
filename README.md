@@ -71,17 +71,17 @@ En el directorio principal se encuentran los archivos de configuración:
 
 | Archivo | Descripción |
 |---|---|
-| `gnmic-config.yml` | Suscribe a métricas de consumo de CPU |
-| `gnmic-stats-ifaces.yml` | Suscribe a métricas de interfaces: `in-multicast-packets`, `out-multicast-packets`, `in-packets`, `out-packets` |
+| `gnmic-cpu-stats.yml` | Suscribe a métricas de consumo de CPU |
+| `gnmic-stats-metricas.yml` | Suscribe a métricas de interfaces: `in-multicast-packets`, `out-multicast-packets`, `in-unicast-packets`, `in-error-packets` |
 
 **Iniciar la suscripción a métricas:**
 
 ```bash
-gnmic subscribe --config gnmic-config.yml
+gnmic subscribe --config gnmic-cpu-stats.yml
 ```
 
 ```bash
-gnmic subscribe --config gnmic-stats-ifaces.yml
+gnmic subscribe --config gnmic-stats-metricas.yml
 ```
 
 ---
